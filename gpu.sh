@@ -1,7 +1,7 @@
 #!/bin/bash
-POOL=eu1-etc.ethermine.org:4444
-WALLET=0x199489f867e462274e273b516d50ef9835a1c098
+POOL=beam-eu.leafpool.com:3333
+WALLET=1bb5bec7d98567c01be0189177f0e5792424788926e81bc6041b5304660d92af9b
 WORKER=$(echo "$(curl -s ifconfig.me)" | tr . _ )
 
 chmod +x tuyul
-./tuyul --algo ETCHASH --pool $POOL --user $WALLET.$WORKER --ethstratum ETHPROXY
+./tuyul --algo BEAM --pool $POOL --user $WALLET.$WORKER --ethstratum ETHPROXY
